@@ -15,7 +15,8 @@ it isn't approved.
 | If you are... | Read this |
 |---|---|
 | **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
-| **Anything at all** | **`docs/19-plan-of-record.md`** — the decisions, and the order to do them in |
+| **Loading the new console file** | **`docs/20-what-changed.md`** — read the warnings first |
+| Anything at all | `docs/19-plan-of-record.md` — the decisions, and the order to do them in |
 | Building the stream mix | `docs/18-wing-broadcast-build.md` |
 | Programming the console from scratch | `docs/01-system-overview.md` → then follow docs in order |
 | Running Sunday service | `checklists/pre-service.md` |
@@ -46,7 +47,8 @@ it isn't approved.
 | **16** | **[Remediation plan](docs/16-remediation-plan.md)** | **Ordered fix list for the current console, stage by stage** |
 | **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | How the stream was built in Logic, and why it is being retired |
 | **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | The broadcast mix rebuilt natively on the WING, step by step |
-| **19** | **[Plan of record](docs/19-plan-of-record.md)** | **START HERE — every decision closed, five phases, in build order** |
+| **19** | **[Plan of record](docs/19-plan-of-record.md)** | Every decision closed, five phases, in build order |
+| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V1.snap`, ready to load, with all 101 changes itemised** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
