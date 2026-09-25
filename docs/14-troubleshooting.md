@@ -35,13 +35,33 @@ bottom. Do not skip steps because one "couldn't be it."
 
 ## Stream has no audio
 
-1. Is Main 2 muted or down?
-2. Is Matrix 6 muted or down?
-3. Are the cables from local out 5–6 connected at both ends?
-4. Is the Osee input set to **line** and unmuted?
-5. Is "audio follow video" on, and did someone cut to a camera with no audio?
-6. Check the confidence monitor — is it the stream, or just your monitoring?
+**At GHC the broadcast mix comes out of Logic Pro, not the console** — see
+`17-logic-broadcast-rig.md`. Work down this list:
+
+1. **Is Logic still running?** Check the transport and the Stream output meter.
+2. Is the Stream output object muted or at −∞?
+3. Is the audio interface still connected? Logic drops a device silently when USB
+   is disturbed — `Settings → Audio → Devices` will show it.
+4. Are the cables from the interface to the Osee connected at both ends?
+5. Is the Osee input set to **line** and unmuted?
+6. Is "audio follow video" on, and did someone cut to a camera with no audio?
 7. Is the encoder running? Is the stream actually live?
+
+**If it cannot be recovered in under a minute: switch the Osee to the EMERGENCY
+AUDIO input.** That is the WING's Matrix 5 feed, independent of the Mac. Get the
+service back on air first, diagnose afterwards.
+
+## Clicks, pops or gradual lip-sync drift on the stream only
+
+This is almost always the **two-clock problem** — Logic running the WING as input
+device and a second interface as output device. The house is unaffected because it
+never touches the Mac.
+
+1. `Settings → Audio → Devices` — confirm **Input Device and Output Device are both
+   the WING**.
+2. If a second interface must be used, it belongs in an Aggregate Device with the
+   WING as clock master and **drift correction enabled** on the other device.
+3. See `17-logic-broadcast-rig.md`.
 
 ## Stream audio is distorted
 

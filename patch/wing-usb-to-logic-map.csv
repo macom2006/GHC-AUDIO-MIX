@@ -1,0 +1,49 @@
+logic_input,wing_usb_out,source,connector_label,wing_channel,usb_port_name_on_wing,status
+1,1,A-1,Kick,ch1 Kick,KICK,OK
+2,2,A-2,Snare TOP,ch2 Snare,SNARE,OK
+3,3,A-3,SNARE BTTM,ch3 HH,HI HAT,OK
+4,4,A-4,Rack 1,ch4 Rack 1,RACK 1,OK
+5,5,A-5,Rack 2,ch5 Rack 2,RACK 2,OK
+6,6,A-6,Floor,ch6 Floor,FLOOR TOM,OK
+7,7,A-7,OHs,ch7 OHs,PC,OK
+8,8,A-8,OHs,(not on a channel),PC,OK
+9,9,A-9,Bass,ch8 Bass,BASS,OK
+10,10,A-10,E Gtr,ch9 E Gtr,E GTR,OK
+11,11,A-11,KEYS 1,ch11 Keys 1,KEYS 1 L,OK
+12,12,A-12,KEYS 1,(not on a channel),,OK
+13,13,A-13,Keys 2,ch12 Keys 2,KEYS 2 L,OK
+14,14,A-14,Keys 2,(not on a channel),,OK
+15,15,A-15,TRACK,ch17 Sax; ch18 LOOP,SAX / LOOP,OK
+16,16,A-16,ACOUSTIC,ch10 AC Gtr,AC GTR,OK
+17,17,A-17,MARTHA,ch27 Wireless 4,WIRELESS 4,OK
+18,18,A-18,ELSIE,ch24 Wireless 3,WIRELESS 3,OK
+19,19,A-19,BRENDA,ch26 Brenda,BRENDA,OK
+20,20,A-20,RAISSA,ch22 Raissa,RAISSA,OK
+21,21,A-25,PASTOR,ch21 Pastor Lapel,PASTOR LAPEL,OK
+22,22,A-26,MARIE,ch13 Vox 1,VOX 1,OK
+23,23,LCL-3,RAISSA,(not on a channel),,OK
+24,24,LCL-4,PEGGY,(not on a channel),,OK
+25,25,LCL-5,DEHIL,(not on a channel),,OK
+26,26,LCL-6,GABRIEL,(not on a channel),,OK
+27,27,AUX-1,JUDE,(not on a channel),,OK
+28,28,AUX-2,BRENDA,(not on a channel),,OK
+29,29,AUX-3,ELSIE,(not on a channel),,OK
+30,30,AUX-4,MARTHA,(not on a channel),,OK
+31,31,A-28,HOUSE,ch23 House,HOUSE,OK
+32,32,A-31,DAVID,(not on a channel),,OK
+33,33,LCL-1,KIDS LAPEL,ch33 (unnamed),,OK
+34,34,A-30,DEHIL,ch14 Vox 2,VOX 2,OK
+35,35,A-27,GABBY,ch15 Vox 3,VOX 3,OK
+36,36,A-29,PEGGY,ch16 Vox 4,VOX 4 PEGGY,OK
+37,37,A-21,JUDE,ch25 Jude,JUDE,OK
+38,38,NOT PATCHED,,,,EMPTY - Logic receives nothing
+39,39,A-23,CRWD 1,ch29 CRWD 1; ch39 (unnamed),CRWD 2 L,OK
+40,40,A-24,CRWD 2,ch30 CRWD 2; ch40 TB,CRWD 2 L,OK
+41,41,NOT PATCHED,,,,EMPTY - Logic receives nothing
+42,42,NOT PATCHED,,,,EMPTY - Logic receives nothing
+43,43,BUS-7,,(not on a channel),FULL MIX R,OK
+44,44,BUS-7,,(not on a channel),FULL MIX R,OK
+45,45,NOT PATCHED,,,,EMPTY - Logic receives nothing
+46,46,NOT PATCHED,,,,EMPTY - Logic receives nothing
+47,47,MAIN-7,,(not on a channel),,OK
+48,48,MAIN-7,,(not on a channel),,OK

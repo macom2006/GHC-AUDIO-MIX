@@ -63,8 +63,14 @@ Do not skip step 4. An untested safe is not a safe.
 
 ## Stage 2 — Reconnect the broadcast path (45 min)
 
-**This stage is blocked until you answer one question:** how does the Osee get audio
-today? See C4 in the audit. Pick the matching path below.
+> **Resolved.** The broadcast mix is built in **Logic Pro** and leaves via a **Volt
+> 276** into the Osee. Full detail, including the clock-domain problem that now
+> outranks everything in this stage, is in
+> [`17-logic-broadcast-rig.md`](17-logic-broadcast-rig.md).
+>
+> **Do doc 17 priority items 1–4 before this stage.** Then come back and use
+> **Path C-revised** below, which converts the WING's orphaned broadcast path into
+> your emergency failover rather than a duplicate mix.
 
 ### First, regardless of the answer — make the stream independent of the house
 
@@ -90,13 +96,17 @@ today? See C4 in the audit. Pick the matching path below.
 | 2.4b | Clear USB out 47/48 (currently both carry muted Main 4 L) or repatch them to something real |
 | 2.5b | In OBS, select the WING USB device, channels 43/44, 48 kHz stereo |
 
-### Path C — the broadcast mix is built on a separate system over MADI
+### Path C-revised — **use this one.** Broadcast lives in Logic; the WING path becomes failover
 
 | Step | Action |
 |---|---|
-| 2.2c | Leave Bus 7 and Matrix 5 alone, but **decide**: either finish them and move broadcast onto the WING, or delete them so nobody inherits a half-built path. |
-| 2.3c | Document the external system in this repository — what it is, who runs it, how it is fed, what comes back on MOD-1/2/3 ("AL FOH", "AL BCAST"). |
-| 2.4c | Either use ch 35 / ch 36 as a confidence return (unmute, route to your monitor bus only) or set them fully off. |
+| 2.2c | **Unmute Bus 7 "BROADCAST"** |
+| 2.3c | Add the missing drum sends to Bus 7 (step 2.6 below) — without them the failover mix has no kit |
+| 2.4c | Keep Matrix 5 fed from Bus 7 at 0 dB with its existing chain |
+| 2.5c | Patch **Matrix 5 L/R to two spare outputs**, wired to a **second Osee input** labelled "EMERGENCY AUDIO" |
+| 2.6c | Clear the junk USB patches: outs **43, 44, 47, 48** |
+| 2.7c | Decide about the MADI card — document what it connects to, or set ch 35 / ch 36 fully off |
+| 2.8c | **Test the failover monthly.** Switch the Osee to the emergency input, listen, switch back. |
 
 ### Then — fix the broadcast bus content
 

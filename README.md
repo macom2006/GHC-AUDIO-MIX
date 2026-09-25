@@ -15,6 +15,7 @@ it isn't approved.
 | If you are... | Read this |
 |---|---|
 | **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
+| **Fixing the stream** | **`docs/17-logic-broadcast-rig.md`** — start with priority item 1 |
 | Programming the console from scratch | `docs/01-system-overview.md` → then follow docs in order |
 | Running Sunday service | `checklists/pre-service.md` |
 | A new volunteer | `docs/15-volunteer-training.md` |
@@ -42,11 +43,13 @@ it isn't approved.
 | 14 | [Troubleshooting](docs/14-troubleshooting.md) | Fast diagnosis under pressure |
 | 15 | [Volunteer training](docs/15-volunteer-training.md) | Three-tier competency path |
 | **16** | **[Remediation plan](docs/16-remediation-plan.md)** | **Ordered fix list for the current console, stage by stage** |
+| **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | **Where the online mix is actually built — and the clock problem in it** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
 [`patch/as-built-channels.csv`](patch/as-built-channels.csv) ·
-[`patch/as-built-outputs.csv`](patch/as-built-outputs.csv)
+[`patch/as-built-outputs.csv`](patch/as-built-outputs.csv) ·
+[`patch/wing-usb-to-logic-map.csv`](patch/wing-usb-to-logic-map.csv)
 
 **Target-state patch**, proposed in docs 01–15:
 [`patch/input-patch.csv`](patch/input-patch.csv) ·
@@ -92,23 +95,23 @@ Read from the console file, not assumed:
 | Channels in use | 40 |
 | PA | Three zones — Matrix 1 "PA L", Matrix 2 "PA C", Matrix 3 "PA R", each delayed and GEQ'd |
 | Subs | Matrix 4, mono, **fed the full house mix** (see audit C5) |
-| Stream | Matrix 5 "STREAM", full mastering chain built, **not patched to any output** (see audit C3) |
+| Stream | Built in **Logic Pro** from the USB split, out via a **Volt 276** to the Osee (see doc 17). The WING's own Matrix 5 "STREAM" is an unpatched leftover — repurpose it as failover. |
+| DAW | Logic Pro, session `Live Stream Broadcast 03.15.26 – Broadcast Pastor`. **Input device WING, output device Volt 276 — two clocks.** |
 
-## The one question I need answered
+## Open items
 
-**How does the Osee actually get audio today?** The snapshot shows Matrix 5
-"STREAM" patched to nothing, Bus 7 "BROADCAST" muted, and the USB outputs carrying
-a near-silent bus. So the audio reaching your stream is coming from somewhere the
-console file does not explain — most likely a PA leg on a local output, or an
-external system on the MADI card. Confirm which, and Stage 2 of the remediation
-plan can be completed.
+The broadcast-path question is answered — see `docs/17-logic-broadcast-rig.md`.
+What remains:
 
-Secondary, useful but not blocking:
-
-- PA make/model, and whether there is an external DSP downstream of Matrix 1/2/3
+- **Verify every Logic track's input assignment** against
+  `patch/wing-usb-to-logic-map.csv`. The session has tracks for sources the WING is
+  not sending (Kick Out, Snare Down, Hi Hat, Bass Mic, EG 2, AG 2, Keys 3, SPD).
+  Either they are inactive leftovers, or assignments have drifted.
+- **Is ch 3 (A-3) a hi-hat or a snare bottom mic?** The connector says one, the
+  channel says the other.
+- **What is A-15?** It is labelled "TRACK" and feeds channels named "Sax" and "LOOP".
+- PA make/model, and whether there is an external DSP after Matrix 1/2/3
 - What the MADI card connects to, and who operates it
-- Whether ch 3 (A-3) is a hi-hat or a snare bottom mic
-- What A-15 actually is — it is labelled "TRACK" and feeds channels named "Sax" and "LOOP"
 - Room dimensions and seating capacity
 
 ---
