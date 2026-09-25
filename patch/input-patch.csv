@@ -1,0 +1,49 @@
+channel,name,short_name,source_port,physical_input,type,phantom,polarity,dca,mute_group,main1_house,main2_broadcast,automix_group,notes
+1,Kick In,KickIn,AES50-A,S32-01,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Dynamic inside drum
+2,Kick Out,KickOut,AES50-A,S32-02,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Sub-kick outside head
+3,Snare Top,SnrTop,AES50-A,S32-03,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Dynamic
+4,Snare Bottom,SnrBot,AES50-A,S32-04,Mic,No,Inverted,4 DRUMS,MG1 BAND,Yes,Yes,-,Polarity inverted vs top
+5,Hi-Hat,HiHat,AES50-A,S32-05,Mic,Yes,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,SDC
+6,Rack Tom 1,Tom1,AES50-A,S32-06,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Clip-on
+7,Rack Tom 2,Tom2,AES50-A,S32-07,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Clip-on
+8,Floor Tom,FlrTom,AES50-A,S32-08,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Clip-on
+9,Overhead L,OH-L,AES50-A,S32-09,Mic,Yes,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,SDC
+10,Overhead R,OH-R,AES50-A,S32-10,Mic,Yes,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,SDC
+11,Percussion,Perc,AES50-A,S32-11,Mic,Yes,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Cajon or congas
+12,Drum Spare,DrmSpr,AES50-A,S32-12,Mic,No,Normal,4 DRUMS,MG1 BAND,Yes,Yes,-,Ride or guest
+13,Bass DI,BassDI,AES50-A,S32-13,DI,Optional,Normal,5 BASS,MG1 BAND,Yes,Yes,-,Primary bass source
+14,Bass Amp,BassAmp,AES50-A,S32-14,Mic,No,Normal,5 BASS,MG1 BAND,Yes,Yes,-,Blend with DI
+15,Electric Gtr 1,EG1,AES50-A,S32-15,Mic/DI,No,Normal,6 GUITARS,MG1 BAND,Yes,Yes,-,Cab mic or modeler
+16,Electric Gtr 2,EG2,AES50-A,S32-16,Mic/DI,No,Normal,6 GUITARS,MG1 BAND,Yes,Yes,-,Cab mic or modeler
+17,Acoustic Gtr 1,AG1,AES50-A,S32-17,DI,Optional,Normal,6 GUITARS,MG1 BAND,Yes,Yes,-,Active DI
+18,Acoustic Gtr 2,AG2,AES50-A,S32-18,DI,Optional,Normal,6 GUITARS,MG1 BAND,Yes,Yes,-,Active DI
+19,Keys L,KeysL,AES50-A,S32-19,DI,No,Normal,7 KEYS,MG1 BAND,Yes,Yes,-,Stereo pair with ch20
+20,Keys R,KeysR,AES50-A,S32-20,DI,No,Normal,7 KEYS,MG1 BAND,Yes,Yes,-,Stereo pair with ch19
+21,Pads L,PadsL,AES50-A,S32-21,DI,No,Normal,7 KEYS,MG1 BAND,Yes,Yes,-,Stereo pair with ch22
+22,Pads R,PadsR,AES50-A,S32-22,DI,No,Normal,7 KEYS,MG1 BAND,Yes,Yes,-,Stereo pair with ch21
+23,Organ / Aux Inst,Organ,AES50-A,S32-23,DI,No,Normal,7 KEYS,MG1 BAND,Yes,Yes,-,Mono repatchable
+24,Cues / Guide,Cues,AES50-A,S32-24,Line,No,Normal,-,-,NO,NO,-,MONITORS ONLY - unassign from all mains and lock
+25,Worship Leader,WL,AES50-A,S32-25,Mic,Optional,Normal,2 WSHP VOX,MG2 VOX,Yes,Yes,-,Primary sung vocal
+26,BGV 1,BGV1,AES50-A,S32-26,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,
+27,BGV 2,BGV2,AES50-A,S32-27,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,
+28,BGV 3,BGV3,AES50-A,S32-28,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,
+29,Vocal Spare,VoxSpr,AES50-A,S32-29,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,Guest singer
+30,Tracks L,TrkL,AES50-A,S32-30,Line,No,Normal,8 TRACKS,MG1 BAND,Yes,Yes,-,Stereo pair with ch31
+31,Tracks R,TrkR,AES50-A,S32-31,Line,No,Normal,8 TRACKS,MG1 BAND,Yes,Yes,-,Stereo pair with ch30
+32,Click,Click,AES50-A,S32-32,Line,No,Normal,-,-,NO,NO,-,MONITORS ONLY - unassign from all mains and lock
+33,Pastor Headset,PastorHS,Local,LOCAL-01,Mic,Optional,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,Primary speech channel
+34,Pastor Lav,PastorLav,Local,LOCAL-02,Mic,Optional,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,Backup - gain set every service
+35,Handheld 1,HH1,Local,LOCAL-03,Mic,No,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,
+36,Handheld 2,HH2,Local,LOCAL-04,Mic,No,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,
+37,Lectern,Lectern,Local,LOCAL-05,Mic,Yes,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,Gooseneck condenser
+38,Guest / Interview,Guest,Local,LOCAL-06,Mic,No,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,
+39,Kids / Announce,Kids,Local,LOCAL-07,Mic,No,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,
+40,Speech Spare,SpchSpr,Local,LOCAL-08,Mic,Optional,Normal,1 SPEECH,MG3 SPEECH,Yes,Yes,X,Held for guest speakers
+41,Ambience L,AmbL,AES50-B,SD16-01,Mic,Yes,Normal,10 AMBIENCE,MG4 MEDIA,NO,Yes,-,BROADCAST ONLY - never to Main 1
+42,Ambience R,AmbR,AES50-B,SD16-02,Mic,Yes,Normal,10 AMBIENCE,MG4 MEDIA,NO,Yes,-,BROADCAST ONLY - never to Main 1
+43,Choir L,ChoirL,AES50-B,SD16-03,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,
+44,Choir R,ChoirR,AES50-B,SD16-04,Mic,Yes,Normal,3 BGV,MG2 VOX,Yes,Yes,-,
+45,Media L,MediaL,AES50-B,SD16-05,Line,No,Normal,11 MEDIA,MG4 MEDIA,Yes,Yes,-,Video playback audio
+46,Media R,MediaR,AES50-B,SD16-06,Line,No,Normal,11 MEDIA,MG4 MEDIA,Yes,Yes,-,Video playback audio
+47,Spare 1,Spr1,AES50-B,SD16-07,-,No,Normal,-,-,NO,NO,-,Muted and at minus infinity
+48,Spare 2,Spr2,AES50-B,SD16-08,-,No,Normal,-,-,NO,NO,-,Muted and at minus infinity
