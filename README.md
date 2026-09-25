@@ -15,7 +15,8 @@ it isn't approved.
 | If you are... | Read this |
 |---|---|
 | **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
-| **Loading the new console file** | **`docs/20-what-changed.md`** — read the warnings first |
+| **Loading the new console file** | **`console/IMPLEMENTATION.md`** — the printable step-by-step, 90 minutes at the desk |
+| Understanding what the file changed | `docs/20-what-changed.md` |
 | Anything at all | `docs/19-plan-of-record.md` — the decisions, and the order to do them in |
 | Building the stream mix | `docs/18-wing-broadcast-build.md` |
 | Programming the console from scratch | `docs/01-system-overview.md` → then follow docs in order |
@@ -49,6 +50,7 @@ it isn't approved.
 | **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | The broadcast mix rebuilt natively on the WING, step by step |
 | **19** | **[Plan of record](docs/19-plan-of-record.md)** | Every decision closed, five phases, in build order |
 | **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V1.snap`, ready to load, with all 101 changes itemised** |
+| **21** | [Stem measurements](docs/21-stem-measurements.md) | Measured analysis of the template's reference stems, and what it confirms |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
