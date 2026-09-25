@@ -1,4 +1,11 @@
-# 03 — Input & Output Patch
+# 03 — Input & Output Patch (target state)
+
+> **This is a proposed layout, not your current patch.** For what the GRACELAND
+> console is actually patched to today, see
+> [`00-audit-2026-03-18.md`](00-audit-2026-03-18.md) and
+> [`../patch/as-built-channels.csv`](../patch/as-built-channels.csv). Your console
+> runs 40 channels on a different layout with people-based channel names. Adopt
+> this layout only as part of a deliberate re-patch.
 
 This is the physical wiring standard. Every cable, every connector, every channel.
 Machine-readable versions: [`../patch/input-patch.csv`](../patch/input-patch.csv),

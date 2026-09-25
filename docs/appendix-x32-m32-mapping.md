@@ -1,8 +1,13 @@
 # Appendix A1 — If the desk is actually an X32 / M32
 
-Your brief said "Baringer Wing 32." There is no product with that name — Behringer's
-WING family is **WING**, **WING Compact** and **WING Rack**, all sharing the same
-48-channel engine. It is possible the desk is actually an **X32** (or its Midas
+> **SUPERSEDED — no longer applies to GHC.** The console file confirms a
+> **Behringer WING full-size**, serial `S240100078BV2`, firmware 3.1-0. This
+> appendix is retained only as reference for a satellite campus or a second room
+> running an X32/M32.
+
+The original brief said "Baringer Wing 32." There is no product with that name —
+Behringer's WING family is **WING**, **WING Compact** and **WING Rack**, all sharing
+the same 48-channel engine. The alternative reading was an **X32** (or its Midas
 sibling, the **M32**), which is a different and older architecture.
 
 Everything in docs 01–15 still applies in principle. This appendix lists what

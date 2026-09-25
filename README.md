@@ -14,6 +14,7 @@ it isn't approved.
 
 | If you are... | Read this |
 |---|---|
+| **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
 | Programming the console from scratch | `docs/01-system-overview.md` → then follow docs in order |
 | Running Sunday service | `checklists/pre-service.md` |
 | A new volunteer | `docs/15-volunteer-training.md` |
@@ -24,6 +25,7 @@ it isn't approved.
 
 | # | Document | What it covers |
 |---|---|---|
+| **00** | **[Console audit](docs/00-audit-2026-03-18.md)** | **What your live console actually does today, and what is wrong with it** |
 | 01 | [System overview](docs/01-system-overview.md) | Design philosophy, hardware inventory, the dual-mix principle |
 | 02 | [Signal flow](docs/02-signal-flow.md) | End-to-end block diagram, clocking, latency budget |
 | 03 | [Input & output patch](docs/03-patch.md) | Every physical connector, every channel |
@@ -39,43 +41,75 @@ it isn't approved.
 | 13 | [Service run sheet](docs/13-service-runsheet.md) | Minute-by-minute operating procedure |
 | 14 | [Troubleshooting](docs/14-troubleshooting.md) | Fast diagnosis under pressure |
 | 15 | [Volunteer training](docs/15-volunteer-training.md) | Three-tier competency path |
+| **16** | **[Remediation plan](docs/16-remediation-plan.md)** | **Ordered fix list for the current console, stage by stage** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
-Machine-readable patch data: [`patch/input-patch.csv`](patch/input-patch.csv),
+**As-built data**, parsed from the live console file:
+[`patch/as-built-channels.csv`](patch/as-built-channels.csv) ·
+[`patch/as-built-outputs.csv`](patch/as-built-outputs.csv)
+
+**Target-state patch**, proposed in docs 01–15:
+[`patch/input-patch.csv`](patch/input-patch.csv) ·
 [`patch/output-patch.csv`](patch/output-patch.csv)
 
 ---
 
-## Assumptions I made (correct these and I will revise)
+## As-built vs. target state — read this before using docs 01–15
 
-This repository was empty, so there were no existing settings to audit. Everything
-here is designed from scratch against a standard contemporary-worship template. I
-have assumed:
+There are two layers of documentation in this repository, and they are not the same
+thing.
 
-1. **Console:** Behringer **WING** (full-size). There is no product called a
-   "WING 32" — the family is WING / WING Compact / WING Rack, all sharing the same
-   48-channel DSP engine, so this document applies to any of them. If you actually
-   have an **X32/M32**, read `docs/appendix-x32-m32-mapping.md` first — the
-   architecture changes materially.
-2. **Stage box:** one 32-in/16-out box on AES50-A (S32, SD16 pair, or DL32).
-3. **Band:** drums, bass, electric guitar, acoustic guitar, keys, playback tracks
-   with click and cues, worship leader + 3 BGVs.
-4. **Speech:** pastor's headset (primary), handheld wireless ×2, lectern mic.
-5. **Monitors:** in-ear monitoring for the band, two wedges for stage/pulpit.
-6. **DAW:** Logic Pro on a Mac connected to the WING over USB-B (48×48 @ 48 kHz).
-7. **Video:** Osee switcher with built-in streaming, audio fed in from the console.
-8. **Room:** single auditorium, main PA plus subs, lobby and nursery feeds.
+| Layer | What it is | Files |
+|---|---|---|
+| **As-built** | What the GRACELAND console actually does today, read directly out of the snapshot `TONY GHC MARCH 2026 PMAMB0.snap` (2026-03-18) | `docs/00-audit-2026-03-18.md`, `patch/as-built-*.csv` |
+| **Target state** | The system design we are working toward | `docs/01-15`, `patch/input-patch.csv`, `patch/output-patch.csv` |
+| **The bridge** | How to get from one to the other, in order | `docs/16-remediation-plan.md` |
 
-## What I need from you to finalize
+Docs 01–15 were written before the console file was available. Their **principles,
+targets and processing values apply as-is** — gain structure, SPL and LUFS targets,
+the dual-mix philosophy, aux-fed subs, feedback procedure, scene safes, broadcast
+offsets. Their **channel numbers and patch layout do not** — those describe a
+proposed 48-channel layout, while your console runs 40 channels with a different
+patch and a people-based naming convention.
 
-Minimum information required — everything else I can hold as a sensible default:
+When the two disagree about *where something is*, the as-built files are correct.
+When they disagree about *how something should be set*, the target-state docs are
+the standard we are moving to.
 
-- Exact console model and firmware version
-- Stage box model(s) and count
-- PA make/model (mains, subs, fills) and whether there is an external DSP
-- Actual instrument and vocal lineup, and wireless mic models
-- Whether you stream **from the Osee** or from **OBS on a computer**
-- Room dimensions and approximate seating capacity
+## Confirmed system facts
+
+Read from the console file, not assumed:
+
+| | |
+|---|---|
+| Console | Behringer **WING full-size**, serial `S240100078BV2`, named **GRACELAND** |
+| Firmware | 3.1-0 (release) |
+| Clock | 48 kHz, internal — correct |
+| USB | 48×48 |
+| Stage I/O | 32 inputs on AES50-A, plus 8 local mic inputs |
+| Expansion | **WING-MADI** card (SFP1 mode) — feeds an external system and returns "AL FOH" / "AL BCAST" |
+| Recording | WING-LIVE SD, 32 tracks per slot; 2-track 24-bit off Main 1 |
+| Channels in use | 40 |
+| PA | Three zones — Matrix 1 "PA L", Matrix 2 "PA C", Matrix 3 "PA R", each delayed and GEQ'd |
+| Subs | Matrix 4, mono, **fed the full house mix** (see audit C5) |
+| Stream | Matrix 5 "STREAM", full mastering chain built, **not patched to any output** (see audit C3) |
+
+## The one question I need answered
+
+**How does the Osee actually get audio today?** The snapshot shows Matrix 5
+"STREAM" patched to nothing, Bus 7 "BROADCAST" muted, and the USB outputs carrying
+a near-silent bus. So the audio reaching your stream is coming from somewhere the
+console file does not explain — most likely a PA leg on a local output, or an
+external system on the MADI card. Confirm which, and Stage 2 of the remediation
+plan can be completed.
+
+Secondary, useful but not blocking:
+
+- PA make/model, and whether there is an external DSP downstream of Matrix 1/2/3
+- What the MADI card connects to, and who operates it
+- Whether ch 3 (A-3) is a hi-hat or a snare bottom mic
+- What A-15 actually is — it is labelled "TRACK" and feeds channels named "Sax" and "LOOP"
+- Room dimensions and seating capacity
 
 ---
 

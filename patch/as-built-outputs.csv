@@ -1,0 +1,113 @@
+output_group,output,source_raw,source_resolved
+LCL,1,A.33,A input 33
+LCL,6,MTX.3,Matrix 2 L (PA C)
+LCL,7,MTX.2,Matrix 1 R (PA L)
+LCL,8,MTX.6,Matrix 3 R (PA R)
+AUX,1,BUS.9,Bus 5 L (BUS5)
+AUX,2,BUS.9,Bus 5 L (BUS5)
+AUX,5,BUS.9,Bus 5 L (BUS5)
+AUX,6,BUS.9,Bus 5 L (BUS5)
+AUX,7,BUS.9,Bus 5 L (BUS5)
+AUX,8,BUS.9,Bus 5 L (BUS5)
+A,1,BUS.1,Bus 1 L (STAGE MON)
+A,2,BUS.2,Bus 1 R (STAGE MON)
+A,3,BUS.5,Bus 3 L (BUS3)
+A,4,BUS.7,Bus 4 L (BUS4)
+A,7,MTX.7,Matrix 4 L (SUBS)
+A,8,MTX.8,Matrix 4 R (SUBS)
+A,33,BUS.15,Bus 8 L (DRUMS)
+A,34,BUS.16,Bus 8 R (DRUMS)
+A,35,A.9,A input 9
+A,36,A.10,A input 10
+A,37,A.11,A input 11
+A,38,A.13,A input 13
+A,39,A.23,A input 23
+A,40,A.24,A input 24
+A,41,BUS.19,Bus 10 L (TALKBACKS)
+A,42,A.20,A input 20
+A,43,A.17,A input 17
+A,44,A.22,A input 22
+A,45,A.30,A input 30
+A,46,A.15,A input 15
+A,47,A.16,A input 16
+A,48,A.25,A input 25
+USB,1,A.1,A input 1
+USB,2,A.2,A input 2
+USB,3,A.3,A input 3
+USB,4,A.4,A input 4
+USB,5,A.5,A input 5
+USB,6,A.6,A input 6
+USB,7,A.7,A input 7
+USB,8,A.8,A input 8
+USB,9,A.9,A input 9
+USB,10,A.10,A input 10
+USB,11,A.11,A input 11
+USB,12,A.12,A input 12
+USB,13,A.13,A input 13
+USB,14,A.14,A input 14
+USB,15,A.15,A input 15
+USB,16,A.16,A input 16
+USB,17,A.17,A input 17
+USB,18,A.18,A input 18
+USB,19,A.19,A input 19
+USB,20,A.20,A input 20
+USB,21,A.25,A input 25
+USB,22,A.26,A input 26
+USB,23,LCL.3,LCL input 3
+USB,24,LCL.4,LCL input 4
+USB,25,LCL.5,LCL input 5
+USB,26,LCL.6,LCL input 6
+USB,27,AUX.1,AUX input 1
+USB,28,AUX.2,AUX input 2
+USB,29,AUX.3,AUX input 3
+USB,30,AUX.4,AUX input 4
+USB,31,A.28,A input 28
+USB,32,A.31,A input 31
+USB,33,LCL.1,LCL input 1
+USB,34,A.30,A input 30
+USB,35,A.27,A input 27
+USB,36,A.29,A input 29
+USB,37,A.21,A input 21
+USB,39,A.23,A input 23
+USB,40,A.24,A input 24
+USB,43,BUS.7,Bus 4 L (BUS4)
+USB,44,BUS.7,Bus 4 L (BUS4)
+USB,47,MAIN.7,Main 4 L (MAIN4)
+USB,48,MAIN.7,Main 4 L (MAIN4)
+MOD,1,A.1,A input 1
+MOD,2,A.2,A input 2
+MOD,3,A.3,A input 3
+MOD,4,A.4,A input 4
+MOD,5,A.5,A input 5
+MOD,6,A.6,A input 6
+MOD,7,A.7,A input 7
+MOD,8,A.8,A input 8
+MOD,9,A.9,A input 9
+MOD,10,A.10,A input 10
+MOD,11,A.11,A input 11
+MOD,12,A.12,A input 12
+MOD,13,A.13,A input 13
+MOD,14,A.14,A input 14
+MOD,15,A.15,A input 15
+MOD,16,A.16,A input 16
+MOD,17,A.26,A input 26
+MOD,18,A.30,A input 30
+MOD,19,A.27,A input 27
+MOD,21,A.21,A input 21
+MOD,22,A.22,A input 22
+MOD,23,A.29,A input 29
+MOD,24,A.25,A input 25
+MOD,25,LCL.3,LCL input 3
+MOD,26,A.28,A input 28
+MOD,27,A.19,A input 19
+MOD,28,A.17,A input 17
+MOD,29,A.18,A input 18
+MOD,30,A.20,A input 20
+MOD,31,A.23,A input 23
+MOD,33,A.23,A input 23
+MOD,34,A.24,A input 24
+MOD,40,A.32,A input 32
+MOD,61,USB.1,USB input 1
+MOD,62,USB.2,USB input 2
+REC,1,MAIN.1,Main 1 L (MASTER)
+REC,2,MAIN.2,Main 1 R (MASTER)
