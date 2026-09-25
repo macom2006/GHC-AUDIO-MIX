@@ -1,5 +1,14 @@
 # 17 — The Logic Pro Broadcast Rig
 
+> **STATUS: the live path described here is being retired.** The decision is to
+> rebuild the broadcast mix natively on the WING — see
+> [`18-wing-broadcast-build.md`](18-wing-broadcast-build.md). This document remains
+> the record of how the Logic rig worked, and its USB map and latency analysis still
+> apply to Logic's remaining job: multitrack recording and virtual soundcheck.
+>
+> Note also the correction in doc 18: I wrote here that some Logic stock plugins have
+> no WING equivalent. They do — C5-CMB, DEQ3, SPKMAN, DE-S2 and LIMITER cover them.
+
 **This document answers the open question from the console audit.** The broadcast
 mix is not built on the WING. It is built in **Logic Pro**, in the session
 `Live Stream Broadcast 03.15.26 – Broadcast Pastor`, and leaves the building

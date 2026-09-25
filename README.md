@@ -15,7 +15,7 @@ it isn't approved.
 | If you are... | Read this |
 |---|---|
 | **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
-| **Fixing the stream** | **`docs/17-logic-broadcast-rig.md`** — start with priority item 1 |
+| **Building the stream mix** | **`docs/18-wing-broadcast-build.md`** — the current plan of record |
 | Programming the console from scratch | `docs/01-system-overview.md` → then follow docs in order |
 | Running Sunday service | `checklists/pre-service.md` |
 | A new volunteer | `docs/15-volunteer-training.md` |
@@ -43,7 +43,8 @@ it isn't approved.
 | 14 | [Troubleshooting](docs/14-troubleshooting.md) | Fast diagnosis under pressure |
 | 15 | [Volunteer training](docs/15-volunteer-training.md) | Three-tier competency path |
 | **16** | **[Remediation plan](docs/16-remediation-plan.md)** | **Ordered fix list for the current console, stage by stage** |
-| **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | **Where the online mix is actually built — and the clock problem in it** |
+| **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | How the stream was built in Logic, and why it is being retired |
+| **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | **THE BUILD — the broadcast mix rebuilt natively on the WING, step by step** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
@@ -95,18 +96,23 @@ Read from the console file, not assumed:
 | Channels in use | 40 |
 | PA | Three zones — Matrix 1 "PA L", Matrix 2 "PA C", Matrix 3 "PA R", each delayed and GEQ'd |
 | Subs | Matrix 4, mono, **fed the full house mix** (see audit C5) |
-| Stream | Built in **Logic Pro** from the USB split, out via a **Volt 276** to the Osee (see doc 17). The WING's own Matrix 5 "STREAM" is an unpatched leftover — repurpose it as failover. |
-| DAW | Logic Pro, session `Live Stream Broadcast 03.15.26 – Broadcast Pastor`. **Input device WING, output device Volt 276 — two clocks.** |
+| Stream | **Moving to WING-native** — Bus 7 → Matrix 5 → LCL out 4/5 → Osee. See doc 18. Previously built in Logic Pro out via a Volt 276 (doc 17), now being retired from the live path. |
+| DAW | Logic Pro — **multitrack recording and virtual soundcheck only** once doc 18 is built. No live dependency on the Mac. |
+| Channels | 40 mono input channels + 8 aux (WING's actual architecture) |
 
 ## Open items
 
-The broadcast-path question is answered — see `docs/17-logic-broadcast-rig.md`.
-What remains:
+The broadcast path is decided: **WING-native, Logic out of the live chain.** The
+build is `docs/18-wing-broadcast-build.md`. What still needs confirming:
 
+- **Who sings and who speaks.** Doc 18 step 4 assumes ch 13–16, 20, 22, 24–27 are
+  the vocal team and ch 21, 23, 33 are speech. Correct me if "House" (ch 23) is a
+  sung vocal, or if any of the wireless channels only ever speak.
+- **What is `MACH4`?** It is loaded in FX7 on the Kids Lapel channel and I cannot
+  identify it from the file. Doc 18 reclaims that slot for the broadcast multiband —
+  check what it is before overwriting it.
 - **Verify every Logic track's input assignment** against
-  `patch/wing-usb-to-logic-map.csv`. The session has tracks for sources the WING is
-  not sending (Kick Out, Snare Down, Hi Hat, Bass Mic, EG 2, AG 2, Keys 3, SPD).
-  Either they are inactive leftovers, or assignments have drifted.
+  `patch/wing-usb-to-logic-map.csv`, for the recording session that remains.
 - **Is ch 3 (A-3) a hi-hat or a snare bottom mic?** The connector says one, the
   channel says the other.
 - **What is A-15?** It is labelled "TRACK" and feeds channels named "Sax" and "LOOP".

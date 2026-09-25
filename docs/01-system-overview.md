@@ -41,7 +41,7 @@ zero aux buses.
 
 | Item | Model | Qty | Location | Notes | Serial / FW |
 |---|---|---|---|---|---|
-| Digital mixing console | Behringer WING | 1 | FOH | 48 input ch, 8 aux ch, 16 stereo buses, 4 stereo mains, 8 stereo matrices, 16 DCAs | |
+| Digital mixing console | Behringer WING | 1 | FOH | **40 mono input channels + 8 aux channels**, 16 stereo buses, 4 stereo mains, 8 stereo matrices, 16 DCAs, 16 FX slots | |
 | Stage box | Behringer S32 (or DL32) | 1 | Stage left | 32 mic in / 16 line out, AES50-A | |
 | Expansion card | WING-LIVE (SD multitrack) | 1 | Console slot | Backup recorder — see doc 10 | |
 | DAW computer | Mac + Logic Pro | 1 | FOH | USB-B to WING, 48×48 @ 48 kHz | |
