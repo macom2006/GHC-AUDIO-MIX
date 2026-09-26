@@ -15,7 +15,8 @@ it isn't approved.
 | If you are... | Read this |
 |---|---|
 | **Fixing the current console** | **`docs/00-audit-2026-03-18.md` → then `docs/16-remediation-plan.md`** |
-| **Loading the new console file** | **`console/IMPLEMENTATION.md`** — the printable step-by-step, 90 minutes at the desk |
+| **Feedback on monitors or mains** | **`docs/22-feedback-diagnosis.md`** |
+| Loading the new console file | `console/IMPLEMENTATION.md` — the printable step-by-step, 90 minutes at the desk |
 | Understanding what the file changed | `docs/20-what-changed.md` |
 | Anything at all | `docs/19-plan-of-record.md` — the decisions, and the order to do them in |
 | Building the stream mix | `docs/18-wing-broadcast-build.md` |
@@ -49,8 +50,9 @@ it isn't approved.
 | **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | How the stream was built in Logic, and why it is being retired |
 | **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | The broadcast mix rebuilt natively on the WING, step by step |
 | **19** | **[Plan of record](docs/19-plan-of-record.md)** | Every decision closed, five phases, in build order |
-| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V1.snap`, ready to load, with all 101 changes itemised** |
+| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V2.snap`, ready to load, with all changes itemised** |
 | **21** | [Stem measurements](docs/21-stem-measurements.md) | Measured analysis of the template's reference stems, and what it confirms |
+| **22** | **[Feedback: diagnosis and cure](docs/22-feedback-diagnosis.md)** | **Why the monitors and mains ring, and the four fixes in order of effect** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
