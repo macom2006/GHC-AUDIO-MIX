@@ -18,6 +18,7 @@ it isn't approved.
 | **Feedback on monitors or mains** | **`docs/22-feedback-diagnosis.md`** — then `docs/23-p16-ultranet.md`, they are the same problem |
 | P16 / in-ear monitoring | `docs/23-p16-ultranet.md` and `docs/24-p16-bank-b.md` |
 | Stream sounds mono, or distorted | `docs/25-osee-gostream-settings.md` |
+| **Hum or buzz on the stream** | **`docs/26-hum-and-clipping-fix.md`** |
 | Loading the new console file | `console/IMPLEMENTATION.md` — the printable step-by-step, 90 minutes at the desk |
 | Understanding what the file changed | `docs/20-what-changed.md` |
 | Anything at all | `docs/19-plan-of-record.md` — the decisions, and the order to do them in |
@@ -57,7 +58,8 @@ it isn't approved.
 | **22** | **[Feedback: diagnosis and cure](docs/22-feedback-diagnosis.md)** | **Why the monitors and mains ring, and the four fixes in order of effect** |
 | **23** | **[P16 Ultranet monitoring](docs/23-p16-ultranet.md)** | The 16 personal-mixer channels, and why seven singers are missing from them |
 | **24** | **[P16 Bank B](docs/24-p16-bank-b.md)** | The second Ultranet feed — implemented in V3, plug-and-play when the box arrives |
-| **25** | **[Osee GoStream settings](docs/25-osee-gostream-settings.md)** | **Correct audio settings on the switcher — stereo, and stopping the clipping** |
+| **25** | [Osee GoStream settings](docs/25-osee-gostream-settings.md) | Correct audio settings on the switcher — stereo, and stopping the clipping |
+| **26** | **[Ground hum and clipping](docs/26-hum-and-clipping-fix.md)** | **Why settings cannot fix it, the diagnostic tree, and the hardware that does** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
