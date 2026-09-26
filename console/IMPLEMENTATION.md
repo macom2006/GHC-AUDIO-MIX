@@ -66,7 +66,7 @@ Allow **90 minutes**, mid-week, with nobody waiting on you.
       **−12 dB average, −6 dB peak**
 - [ ] Start around **−12 dB** of trim. The WING is +4 dBu; most switchers expect
       −10 dBV. If it still distorts, fit a −20 dB inline pad.
-- [ ] Write the final value here: **________ dB**
+- [x] Final value: **−30.5 dB** — set 2026-09-26, verified clean. **Scene-safe Matrix 5 so this cannot be lost.**
 - [ ] Once set, never touch it again. Mix level lives on the faders.
 
 ---

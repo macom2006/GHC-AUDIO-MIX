@@ -1,23 +1,37 @@
-# 26 — Ground Hum and Clipping: the Actual Fix
+# 26 — Ground Hum and Clipping
 
-The hum and the remaining clipping are **the same problem**, and it cannot be solved
-with settings. It needs about £60–150 of hardware.
+> ## RESOLVED — 2026-09-26
+>
+> **Matrix 5 output trim set to −30.5 dB. Both the clipping and the noise are gone.**
+>
+> That outcome also diagnoses it: **it was never a ground loop.** A true ground loop
+> hum is independent of signal level — reducing the programme makes the hum *more*
+> audible against it, not less. Because lowering the level cured both symptoms at
+> once, what was being heard as "ground noise" was overload artefact from an input
+> stage driven roughly 40 dB too hot. One fault, not two.
+>
+> **The DI boxes below are therefore optional, not required.** They remain a genuine
+> improvement (see "What the transformers would still buy you"), but the system is
+> working and there is no longer anything urgent here.
+
+The original analysis follows, kept because the level arithmetic still governs this
+connection.
 
 ---
 
-## First, a correction
+## On the signal-to-noise cost
 
-I told you to drop the WING's Matrix 5 output trim to about **−30 dB**. That was an
-emergency stopgap to stop the distortion, and as a permanent setting **it is making
-your noise worse.**
+Attenuating 30 dB at the console does cost signal-to-noise: the programme sits that
+much closer to the converter's noise floor, and any gain applied downstream brings
+that floor up with it.
 
-Here is why. Running the console output 30 dB down means the signal leaves the WING
-at roughly 1/30th of its proper voltage. The GoStream's preamp then has to amplify it
-back up — and it amplifies the cable's noise, the ground hum and the input stage's
-own noise floor by exactly the same amount. You have deliberately worsened your
-signal-to-noise ratio by 30 dB.
+In practice, on a WING, it turns out to be acceptable. The console's converters have
+enough dynamic range to absorb it, and the stream's lossy encoder has a higher noise
+floor than the result anyway. **It measured and sounded clean in the room, which is
+the test that counts.**
 
-**Attenuate with a transformer, not with a fader.** That is the whole fix.
+The theoretical objection stands — attenuation belongs in a transformer, not a
+fader — but it is now a refinement rather than a fix.
 
 ---
 
@@ -42,7 +56,21 @@ box that provides it without a penalty:
 
 ---
 
-## The fix: two passive DI boxes, used in reverse
+## What the transformers would still buy you
+
+Optional now. Worth doing when convenient, not urgent:
+
+- **Roughly 25–30 dB better signal-to-noise**, by letting the console run at its
+  proper operating level instead of 30 dB down
+- **Immunity if anything changes** — a new HDMI device, a different power circuit, a
+  longer cable run. A transformer-isolated feed does not care.
+- **Protection against the setting being lost.** A −30.5 dB trim is one accidental
+  nudge, one scene recall without safes, or one firmware reset away from full-scale
+  overload into a microphone input.
+
+That last point is the real argument. See "Protect the setting" below.
+
+## The optional fix: two passive DI boxes, used in reverse
 
 A passive DI does three things at once, and all three are what you need:
 
@@ -141,24 +169,20 @@ Then it is coming from the stage, not the video chain. Likely causes:
 
 ---
 
-## Why this will not be fixed by settings
+## Protect the setting
 
-I want to be plain about this, because it has cost you several rounds already.
+**−30.5 dB of trim is now load-bearing.** If it is ever lost, the GoStream's mic
+input receives a full-scale +4 dBu console output — instant, severe distortion, live,
+with no warning.
 
-You are connecting a professional balanced line output to a compact switcher's
-microphone input. That interface is a **20–30 dB level mismatch and a shared ground
-path**. Neither box has a control that fixes either one. Every adjustment available
-to you trades one problem for the other:
+- **Matrix 5 must be scene-safed** (`16-remediation-plan.md`, Stage 1). It is already
+  on that list; this makes it non-negotiable.
+- **Write the value on a label on the console** and in the run sheet.
+- **Check it in the pre-service checklist**, every week.
+- Re-verify it after any firmware update.
 
-- Turn it down at the console → quieter, but the hum and noise come up with it
-- Turn it up at the console → cleaner signal-to-noise, but it clips
-- There is no setting in between where both are acceptable
-
-A transformer solves both simultaneously and permanently, which is exactly why every
-professional install has one at this junction.
-
-**This is the last piece of hardware your broadcast chain needs.** It is also, per
-pound spent, the biggest audible improvement left in the entire system.
+This is the strongest reason to fit the transformers eventually: a passive DI cannot
+be nudged, reset or recalled away.
 
 ---
 
@@ -175,4 +199,4 @@ pound spent, the biggest audible improvement left in the entire system.
 - [ ] PGM fader back to **0 dB**, limiter **ON** at **−3 dB**
 - [ ] Loudest worship material: **no red clip indicators anywhere**
 - [ ] Listen on headphones from the actual stream — hum gone, stereo image correct
-- [ ] Record the final Matrix 5 trim value: `______ dB`
+- [x] Final Matrix 5 trim value: **−30.5 dB** (2026-09-26)

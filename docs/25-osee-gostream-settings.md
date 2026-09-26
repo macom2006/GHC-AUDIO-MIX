@@ -165,7 +165,7 @@ value on Mic 1 and Mic 2 and leave Matrix 5's delay off on the console.
 
 | On the WING | |
 |---|---|
-| Matrix 5 output trim | Set for −12 dB average on the GoStream meters. Record it here: `______ dB` |
+| Matrix 5 output trim | **−30.5 dB** — set and verified clean, 2026-09-26. Scene-safe this. |
 
 ---
 

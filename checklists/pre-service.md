@@ -34,6 +34,7 @@
 - [ ] LUFS reading near **−16**
 - [ ] **Checked on a phone speaker**
 - [ ] **Click (ch 32) and cues (ch 24) NOT in Main 2** — solo and verify
+- [ ] **Matrix 5 output trim still at −30.5 dB** (if it has moved, the stream will distort badly)
 - [ ] Lip-sync verified
 - [ ] Stream live, confidence monitor working, listener assigned: ____________
 
