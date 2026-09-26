@@ -150,9 +150,14 @@ Sixteen channels cannot serve twelve singers plus a full band discretely. It is
 arithmetic again, not configuration.
 
 **AES50 port B is completely free** — I checked, nothing is patched to it. Add an
-**S16 or SD16 on AES50-B** and its Ultranet port gives you **sixteen more P16
-channels**, for thirty-two total. Then every singer gets their own, every instrument
-gets its own, and nobody argues.
+**S16 or SD16 on AES50-B** and its Ultranet port gives you **a second bank of sixteen
+P16 channels**.
+
+> **Correction:** this is not one 32-channel system. Two Ultranet hubs are two
+> separate 16-channel buses, and a P16-M sees only the bank it is plugged into. Each
+> bank has to stand on its own. The implemented layout in
+> [`24-p16-bank-b.md`](24-p16-bank-b.md) reflects that — Bank B carries a stereo band
+> stem rather than discrete instruments.
 
 That is a modest purchase that removes your wedge dependency, your feedback problem
 and your monitor complaints in one move. Of everything in this repository, it is the
