@@ -65,6 +65,7 @@ it isn't approved.
 | **29** | [Computer audio dropouts](docs/29-pc-audio-dropouts.md) | Why it cut intermittently — resolved by moving playback to analog in V6 |
 | **30** | **[Recording without Logic](docs/30-recording-without-logic.md)** | **Console SD recording, virtual soundcheck from the card, and PC playback on analog** |
 | **31** | [House mic feedback](docs/31-house-mic-feedback.md) | Octave-wide cuts that never worked, a slow compressor, and the ring-out that is still owed |
+| — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
