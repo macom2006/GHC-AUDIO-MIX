@@ -45,6 +45,7 @@ content are sent to the subs.
 | 14 | Bass Amp | −10 dB | Blend |
 | 19/20 | Keys L/R | −12 dB | Only if the piano/synth patch carries real low end |
 | 30/31 | Tracks L/R | −6 dB | Programmed sub content |
+| **Computer / playback** | **−6 dB** | | Video audio and walk-in music are full-range and mixed — they belong in the subs |
 | **Everything else** | **OFF** | | |
 
 Vocals, guitars, overheads, hi-hat, percussion, speech, ambience and media
