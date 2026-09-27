@@ -62,6 +62,7 @@ it isn't approved.
 | **26** | [Ground hum and clipping](docs/26-hum-and-clipping-fix.md) | Resolved — Matrix 5 at −30.5 dB. Diagnosis, and why the DI boxes are now optional |
 | **27** | **[Feedback: live file analysis](docs/27-feedback-live-analysis.md)** | **The spiral in the operators' own edits, and the 90 minutes that fixes it** |
 | **28** | [Computer audio fix](docs/28-computer-audio-fix.md) | Duplicate paths, an empty DCA, the wrong USB port, and the missing sub send |
+| **29** | [Computer audio dropouts](docs/29-pc-audio-dropouts.md) | Why it cuts intermittently — the console is clean, so it is the Mac or the USB link |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
