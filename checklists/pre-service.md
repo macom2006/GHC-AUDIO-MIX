@@ -10,8 +10,8 @@
 - [ ] **Amps/speakers LAST**
 - [ ] Show file `GHC-MASTER-SHOW` loaded, **Scene 1 DEFAULT** recalled
 - [ ] All 48 channels present
-- [ ] Logic Pro open, WING detected, session saved from template
-- [ ] SD card in and formatted
+- [ ] **SD cards in BOTH WING-LIVE slots, formatted in the console**
+- [ ] USB stick in for the 2-track recorder
 - [ ] Osee on, audio connected, meters moving
 
 ## T−75 LINE CHECK
@@ -46,8 +46,8 @@
 - [ ] Lav tested and muted
 
 ## T−15 RECORD & GO
-- [ ] **Logic Pro RECORDING**
-- [ ] **SD card RECORDING**
+- [ ] **WING-LIVE SD RECORDING (32 track)**
+- [ ] **2-track USB RECORDING**
 - [ ] Scene 2 PRE-SERVICE recalled
 - [ ] Walk-in music, 72–76 dBA
 - [ ] All mics muted
@@ -78,8 +78,7 @@
 ---
 
 ## POST-SERVICE
-- [ ] Logic stopped and **saved**
-- [ ] SD card stopped and ejected
+- [ ] Both recorders stopped and media ejected
 - [ ] **Backed up to NAS before leaving**
 - [ ] Scene 1 recalled
 - [ ] Power down: **amps → stage boxes → console**

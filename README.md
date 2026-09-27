@@ -43,7 +43,7 @@ it isn't approved.
 | 07 | [Broadcast mix](docs/07-broadcast-mix.md) | The online mix, loudness targets, mastering chain |
 | 08 | [Monitors & IEMs](docs/08-monitors-iem.md) | Stage mixes, wedges, feedback control |
 | 09 | [FX rack](docs/09-fx-rack.md) | Reverbs, delays, and where they live |
-| 10 | [Logic Pro](docs/10-logic-pro.md) | Multitrack recording + virtual soundcheck |
+| 10 | [Logic Pro](docs/10-logic-pro.md) | *Superseded by doc 30* — Logic is out of the system |
 | 11 | [Osee video integration](docs/11-osee-video-integration.md) | Audio embed, levels, lip-sync |
 | 12 | [Scenes & snapshots](docs/12-scenes-snapshots.md) | The show file, scope and safes |
 | 13 | [Service run sheet](docs/13-service-runsheet.md) | Minute-by-minute operating procedure |
@@ -53,7 +53,7 @@ it isn't approved.
 | **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | How the stream was built in Logic, and why it is being retired |
 | **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | The broadcast mix rebuilt natively on the WING, step by step |
 | **19** | **[Plan of record](docs/19-plan-of-record.md)** | Every decision closed, five phases, in build order |
-| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V5.snap`, ready to load, with all changes itemised** |
+| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V6.snap`, ready to load, with all changes itemised** |
 | **21** | [Stem measurements](docs/21-stem-measurements.md) | Measured analysis of the template's reference stems, and what it confirms |
 | **22** | **[Feedback: diagnosis and cure](docs/22-feedback-diagnosis.md)** | **Why the monitors and mains ring, and the four fixes in order of effect** |
 | **23** | **[P16 Ultranet monitoring](docs/23-p16-ultranet.md)** | The 16 personal-mixer channels, and why seven singers are missing from them |
@@ -62,7 +62,8 @@ it isn't approved.
 | **26** | [Ground hum and clipping](docs/26-hum-and-clipping-fix.md) | Resolved — Matrix 5 at −30.5 dB. Diagnosis, and why the DI boxes are now optional |
 | **27** | **[Feedback: live file analysis](docs/27-feedback-live-analysis.md)** | **The spiral in the operators' own edits, and the 90 minutes that fixes it** |
 | **28** | [Computer audio fix](docs/28-computer-audio-fix.md) | Duplicate paths, an empty DCA, the wrong USB port, and the missing sub send |
-| **29** | [Computer audio dropouts](docs/29-pc-audio-dropouts.md) | Why it cuts intermittently — the console is clean, so it is the Mac or the USB link |
+| **29** | [Computer audio dropouts](docs/29-pc-audio-dropouts.md) | Why it cut intermittently — resolved by moving playback to analog in V6 |
+| **30** | **[Recording without Logic](docs/30-recording-without-logic.md)** | **Console SD recording, virtual soundcheck from the card, and PC playback on analog** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
 **As-built data**, parsed from the live console file:
@@ -115,7 +116,7 @@ Read from the console file, not assumed:
 | PA | Three zones — Matrix 1 "PA L", Matrix 2 "PA C", Matrix 3 "PA R", each delayed and GEQ'd |
 | Subs | Matrix 4, mono, **fed the full house mix** (see audit C5) |
 | Stream | **Moving to WING-native** — Bus 7 → Matrix 5 → LCL out 4/5 → Osee. See doc 18. Previously built in Logic Pro out via a Volt 276 (doc 17), now being retired from the live path. |
-| DAW | Logic Pro — **multitrack recording and virtual soundcheck only** once doc 18 is built. No live dependency on the Mac. |
+| Recording | **Console WING-LIVE SD, 32 tracks** — no computer. Cards not yet fitted. See doc 30. |
 | Channels | 40 mono input channels + 8 aux (WING's actual architecture) |
 
 ## Open items

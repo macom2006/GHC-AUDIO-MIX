@@ -1,5 +1,10 @@
 # 10 — Logic Pro: Multitrack Recording & Virtual Soundcheck
 
+> **SUPERSEDED — Logic is no longer used at GHC, for recording or anything else.**
+> Recording and virtual soundcheck now run on the console's own WING-LIVE SD
+> recorder: see [`30-recording-without-logic.md`](30-recording-without-logic.md).
+> This document is retained in case multitrack to a computer is ever reinstated.
+
 Recording every service costs nothing once it is set up, and it pays for itself
 three ways: **virtual soundcheck**, **content for media**, and **training**.
 
