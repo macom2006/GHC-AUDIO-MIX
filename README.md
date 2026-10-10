@@ -53,7 +53,7 @@ it isn't approved.
 | **17** | **[Logic Pro broadcast rig](docs/17-logic-broadcast-rig.md)** | How the stream was built in Logic, and why it is being retired |
 | **18** | **[WING broadcast build](docs/18-wing-broadcast-build.md)** | The broadcast mix rebuilt natively on the WING, step by step |
 | **19** | **[Plan of record](docs/19-plan-of-record.md)** | Every decision closed, five phases, in build order |
-| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V7.snap`, ready to load, with all changes itemised** |
+| **20** | **[What changed in the console file](docs/20-what-changed.md)** | **THE FILE — `console/GHC BROADCAST V7.snap` (safe default) or `V8-TONE.snap` (tonal A/B)** |
 | **21** | [Stem measurements](docs/21-stem-measurements.md) | Measured analysis of the template's reference stems, and what it confirms |
 | **22** | **[Feedback: diagnosis and cure](docs/22-feedback-diagnosis.md)** | **Why the monitors and mains ring, and the four fixes in order of effect** |
 | **23** | **[P16 Ultranet monitoring](docs/23-p16-ultranet.md)** | The 16 personal-mixer channels, and why seven singers are missing from them |
@@ -65,6 +65,7 @@ it isn't approved.
 | **29** | [Computer audio dropouts](docs/29-pc-audio-dropouts.md) | Why it cut intermittently — resolved by moving playback to analog in V6 |
 | **30** | **[Recording without Logic](docs/30-recording-without-logic.md)** | **Console SD recording, virtual soundcheck from the card, and PC playback on analog** |
 | **31** | [House mic feedback](docs/31-house-mic-feedback.md) | Octave-wide cuts that never worked, a slow compressor, and the ring-out that is still owed |
+| **32** | **[Copilot file review](docs/32-copilot-file-review.md)** | **Why not to load it, what it got right, and the three-point check before loading any file** |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
