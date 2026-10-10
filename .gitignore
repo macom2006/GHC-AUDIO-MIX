@@ -1,0 +1,10 @@
+# Python bytecode (generated when running tools/wing_probe.py)
+__pycache__/
+*.py[cod]
+
+# macOS / editor noise
+.DS_Store
+*.swp
+
+# Local console exports — keep deliberate versions in console/, not scratch saves
+*.snap.bak
