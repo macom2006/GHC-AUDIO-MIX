@@ -67,6 +67,7 @@ it isn't approved.
 | **31** | [House mic feedback](docs/31-house-mic-feedback.md) | Octave-wide cuts that never worked, a slow compressor, and the ring-out that is still owed |
 | **32** | [Copilot file review](docs/32-copilot-file-review.md) | Why not to load it, what it got right, and the three-point check before loading any file |
 | **33** | **[Stream EQ and comfort](docs/33-stream-eq-and-comfort.md)** | **+8 dB of stacked treble, a limiter used as a maximiser, and gain staging the wrong way round** |
+| **34** | [Recording measurement](docs/34-recording-measurement.md) | Measured analysis of an actual clip: −12.5 LUFS, clipping at +0.1 dBTP, stereo confirmed working |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
