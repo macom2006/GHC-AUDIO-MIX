@@ -68,8 +68,14 @@ it isn't approved.
 | **32** | [Copilot file review](docs/32-copilot-file-review.md) | Why not to load it, what it got right, and the three-point check before loading any file |
 | **33** | **[Stream EQ and comfort](docs/33-stream-eq-and-comfort.md)** | **+8 dB of stacked treble, a limiter used as a maximiser, and gain staging the wrong way round** |
 | **34** | [Recording measurement](docs/34-recording-measurement.md) | Measured analysis of an actual clip: −12.5 LUFS, clipping at +0.1 dBTP, stereo confirmed working |
+| **35** | **[Live OSC control](docs/35-wing-osc-control.md)** | **Corrected WING address map, a read-only verifier, and the six-step sequence** |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
+
+**Tools:** [`tools/WING-OSC-REFERENCE.md`](tools/WING-OSC-REFERENCE.md) ·
+[`tools/wing-osc-map.json`](tools/wing-osc-map.json) ·
+[`tools/wing_probe.py`](tools/wing_probe.py) ·
+[`tools/wing-tools.ts`](tools/wing-tools.ts)
 
 **As-built data**, parsed from the live console file:
 [`patch/as-built-channels.csv`](patch/as-built-channels.csv) ·
