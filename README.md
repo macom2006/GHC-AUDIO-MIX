@@ -71,6 +71,7 @@ it isn't approved.
 | **35** | **[Live OSC control](docs/35-wing-osc-control.md)** | **Corrected WING address map, a read-only verifier, and the six-step sequence** |
 | **36** | **[Singer shout control](docs/36-singer-shout-control.md)** | **Dehil, Elsie and Peggy: quieter but more audible — V10** |
 | **37** | **[Pastor's mic levelling](docs/37-pastor-mic-levelling.md)** | **Steady when soft, still alive when he lifts — V11** |
+| **38** | **[Stream vocal level](docs/38-stream-vocal-level.md)** | **The one fader that lowers stream vocals without touching FOH** |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 
