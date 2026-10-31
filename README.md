@@ -77,6 +77,7 @@ it isn't approved.
 | **41** | **[Stream master chain](docs/41-stream-master-chain.md)** | **Six compressors found in series; balance set — V14** |
 | **42** | **[Vocalist wedge mix](docs/42-vocalist-wedge-mix.md)** | **Vocals, a little keys, drums for tempo — V15, corrected in V16** |
 | **43** | **[System status run-down](docs/43-system-status.md)** | **Full audit of stream, wedges, FOH and P16 against V16 — start here** |
+| — | [`tools/coupling_check.py`](tools/coupling_check.py) | Run before shipping any snapshot: finds dead-end buses, shared faders, wet/dry drift, duplicate inputs, wrong labels |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
 

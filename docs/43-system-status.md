@@ -197,3 +197,88 @@ team's to make, not mine.
 
 Items 2 and 7 I can build now. Item 1 needs the room. Items 3 and 6 need
 hands on site. Items 4 and 5 need a decision from you.
+
+---
+
+# Addendum — findings from `tools/coupling_check.py`
+
+Written after this run-down, in answer to "how come you always find stuff after
+making changes?". It audits coupling mechanically rather than by recollection.
+Run it before shipping any snapshot:
+
+```
+python3 tools/coupling_check.py "console/GHC BROADCAST V16.snap"
+```
+
+It immediately found five things this run-down had missed.
+
+## 1. Bus 9 "WL BUS P16" is fully built and reaches nothing
+
+**14 vocal and speech sources, each at a deliberate −6 dB.** That is a mix
+somebody built on purpose, not an accident. It is patched to no output, sends to
+no bus, and feeds no main.
+
+**This is the vocal stem for the in-ears.** Section 4 of this document proposed
+building one from scratch on Bus 5. That was wrong — it already exists. It needs
+**one output patch** to Ultranet, not a new bus.
+
+## 2. Bus 12 "Delay" also reaches nothing
+
+10 vocal sources, levels clearly set by hand. Dead end. The vocal delay effect
+is not reaching anywhere.
+
+## 3. The reverbs are in the wedges and in the house
+
+| Bus | → Bus 1 wedges | → Main 1 house | → Bus 7 stream |
+|---|---|---|---|
+| 14 Inst Verb | off | **yes** | −1.0 |
+| 15 Vox Verb | **−19.1** | **yes** | −1.0 |
+
+Vox Verb returns into the vocalists' wedges at −19.1 dB. Reverb in a monitor
+wedge is a standard feedback contributor, and nothing in this engagement had
+noticed it. It should be examined during the ring-out.
+
+Both reverbs feed three destinations, so **their faders are shared** between
+house, wedges and stream — moving one moves all three.
+
+## 4. The stage-box names are the real names
+
+| Ch | Channel says | Stage box says |
+|---|---|---|
+| 3 | HH | **SNARE BTTM** |
+| 13 | Vox 1 | MARIE |
+| 14 | Vox 2 | **DEHIL** |
+| 15 | Vox 3 | GABBY |
+| 16 | Vox 4 | **PEGGY** |
+| 17 | Sax | **TRACK** |
+| 18 | LOOP | **TRACK** |
+| 20 | LEAD2 | DAVID |
+| 24 | Wireless 3 | **ELSIE** |
+| 27 | Wireless 4 | MARTHA |
+
+Two consequences:
+
+- **The V10/V12 singer mapping was right.** Dehil = ch14, Peggy = ch16,
+  Elsie = ch24, confirmed independently.
+- **ch3 is a snare bottom mic, not a hi-hat.** Check its polarity against the
+  snare top; a snare bottom mic normally needs inverting. Its name is wrong.
+- **There is no sax.** A-15 reads "TRACK", and both ch17 and ch18 point at it.
+  The A-15 duplicate is two channels on one playback feed, not a mis-patched
+  instrument.
+
+## 5. Buses 2 and 5 are dead ends too
+
+Confirming section 2. Buses 2, 5, 9 and 12 — **four** configured mixes that
+reach nothing, 35 channel sends feeding them in total.
+
+## Revised priority
+
+| | Item | Change from above |
+|---|---|---|
+| 1 | Ring out the wedges — **and look at Vox Verb at −19.1 into Bus 1** | expanded |
+| 2 | Stream reverb: Bus 15 → Bus 7 to −4.0 | unchanged, but note the fader is shared |
+| 3 | **Patch Bus 9 to Ultranet** — the P16 vocal stem already exists | replaces "build a vocal stem on Bus 5" |
+| 4 | SD cards, record two services | unchanged |
+| 5 | Recover ~3 dB above 8 kHz in FOH | unchanged |
+| 6 | Rename ch3 and check its polarity; resolve the two TRACK channels | new |
+| 7 | Decide what buses 2, 5 and 12 are for, or clear them | expanded |
