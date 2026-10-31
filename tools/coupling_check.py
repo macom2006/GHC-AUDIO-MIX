@@ -19,7 +19,7 @@ Run it before shipping any snapshot. It answers, mechanically:
 
 Usage:
     python3 tools/coupling_check.py "console/GHC BROADCAST V16.snap"
-    python3 tools/coupling_check.py OLD.snap NEW.snap     # also: impact of the diff
+    python3 tools/coupling_check.py OLD.snap NEW.snap   # audits NEW, plus diff impact
 """
 import json, sys, itertools
 
@@ -181,7 +181,12 @@ def impact(old, new):
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit(__doc__)
-    issues = report(load(sys.argv[1]))
+    # With two files, audit the NEW one -- the file about to be loaded on the
+    # board -- not the old one. Auditing the file you are replacing tells you
+    # nothing about what you are shipping.
+    subject = sys.argv[2] if len(sys.argv) > 2 else sys.argv[1]
+    print('AUDITING: %s\n' % subject)
+    issues = report(load(subject))
     if len(sys.argv) > 2:
         impact(load(sys.argv[1]), load(sys.argv[2]))
     sys.exit(1 if issues else 0)
