@@ -80,6 +80,7 @@ it isn't approved.
 | **44** | **[V17 reverb balance](docs/44-v17-reverb-balance.md)** | **Stream reverb tracks the vocals again — V17, the version to load** |
 | **45** | **[Measured recording 2026-10-25](docs/45-recording-2026-10-25.md)** | **First real measurement: no clipping, no hum, but 3.7 dB mono cancellation at 200–500 Hz** |
 | **46** | **[USB audio lost](docs/46-usb-audio-lost.md)** | **Console ruled out across all 18 snapshots — it is the computer or the link** |
+| **47** | **[Crowd as a full house](docs/47-crowd-mic-full-house.md)** | **Levelling the real congregation so it reads full on the stream — V20** |
 | — | [`tools/coupling_check.py`](tools/coupling_check.py) | Run before shipping any snapshot: finds dead-end buses, shared faders, wet/dry drift, duplicate inputs, wrong labels |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
