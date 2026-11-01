@@ -92,3 +92,50 @@ This is the third time. Two things reduce the recurrence:
 2. **Put the PC check in the pre-service checklist** —
    `checklists/pre-service.md` — as an explicit "play a track, confirm AUX 8
    meters" step, so it is caught at 9 a.m. rather than mid-service.
+
+---
+
+# Resolved — and V19 stops the snapshot undoing it
+
+**The Mac had moved to sending on USB channels 1 and 2**, not 7 and 8. That is
+what a WING-connected computer defaults to when its audio device
+re-initialises: the first output pair.
+
+Fixed at the desk by re-patching **AUX 8 ← USB-1, stereo**. Confirmed playing.
+
+## Why a snapshot change was necessary, not optional
+
+Every snapshot V1–V18 has AUX 8 sourced from **USB-7**. Recalling any of them
+would have patched the PC straight back to a dead input and killed the audio
+again — most likely mid-service, with no obvious cause.
+
+`console/GHC BROADCAST V19.snap` makes the file match the desk.
+
+| | V18 | V19 |
+|---|---|---|
+| AUX 8 source | USB-7 | **USB-1** |
+| USB-1 mode | mono | **stereo** (takes 1+2) |
+| USB-1 / USB-2 name | KICK / SNARE | **PC / PC** |
+| USB-7 / USB-8 name | PC / PC | *(cleared)* |
+
+The KICK/SNARE names were leftovers from the Logic multitrack return, retired in
+doc 30. Clearing the stale "PC" labels on USB-7/8 matters for the same reason
+the "Pastor Lapel" label did in V15: **a name that lies will eventually be
+believed.**
+
+## Why USB-1 is the better permanent home
+
+USB-1/2 is where the computer lands by default after any reset, so the console
+now meets the machine instead of fighting it. Nothing else on the desk uses
+USB-1/2 — verified, exactly one source claims a USB input.
+
+## Verified
+
+All 40 channels byte-identical. AUX 1–7 identical. All buses, mains and matrices
+identical. Every FX slot identical. The entire output patch identical.
+`ae_globals` identical (clock 48 kHz, usbacfg 48/48). **AUX 8's routing is
+identical — only its source moved**, so Main 1, Bus 7, Bus 11 and the monitor
+sends are all exactly as they were.
+
+Exactly one thing sources from USB, and ch34 is still parked at source OFF and
+muted, so the duplicate-PC-path problem from doc 28 has not come back.
