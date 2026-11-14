@@ -84,6 +84,7 @@ it isn't approved.
 | **48** | **[Pastor's mic lacks lows](docs/48-pastor-lows.md)** | **Measured 15.6 dB down at 110 Hz; high-pass and chest cut corrected — V21** |
 | **49** | **[Stream speech sounds distant](docs/49-stream-speech-distant.md)** | **V20's crowd lift was the cause; use Mute Group 6 for the sermon — V22** |
 | **50** | **[Only one vocal in the P16](docs/50-p16-only-one-vocal.md)** | **Live bank had 4 of 10 singers; the vocal stem existed unpatched — V23** |
+| **51** | **[P16: every vocal on its own channel](docs/51-p16-all-vocals.md)** | **Bank A rebuilt — 10 singers, Pastor, House, band stem, no crowd — V24** |
 | — | [`tools/coupling_check.py`](tools/coupling_check.py) | Run before shipping any snapshot: finds dead-end buses, shared faders, wet/dry drift, duplicate inputs, wrong labels |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
