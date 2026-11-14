@@ -76,3 +76,17 @@ Bank B remains mapped with all ten singers and connected to nothing. **An S16 or
 SD16 on AES50-B** would give a second 16-channel bank — and with Bank A now
 serving singers, that second bank is what would give the musicians their
 individual instruments back.
+
+## Coupling check: two new flags, both expected
+
+`tools/coupling_check.py` goes from 8 items to 10 on V24. Both additions are
+consequences of the change, not faults:
+
+- **Bus 8 DRUMS now reaches nothing.** Intended — the drums stem came off the
+  P16 because drums are inside Bus 6. It joins buses 2, 5, 9 and 12 as
+  configured-but-unrouted.
+- **Bus 6 BAND STEM now feeds output groups A and B.** It is patched to the new
+  Bank A as well as the long-dead Bank B, so **one fader controls the band blend
+  in both banks.** Harmless while nothing is fitted on AES50-B; worth remembering
+  if an S16/SD16 ever goes in, because it is then a shared control rather than
+  two independent ones.
