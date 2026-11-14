@@ -86,6 +86,7 @@ it isn't approved.
 | **50** | **[Only one vocal in the P16](docs/50-p16-only-one-vocal.md)** | **Live bank had 4 of 10 singers; the vocal stem existed unpatched — V23** |
 | **51** | **[P16: every vocal on its own channel](docs/51-p16-all-vocals.md)** | **Bank A rebuilt — 10 singers, Pastor, House, band stem, no crowd — V24** |
 | **52** | **[P16 Bank A, instruments first](docs/52-p16-instruments-first.md)** | **Instruments, then Pastor/House, then Dehil/Elsie, rest via stem — V25, load this** |
+| **53** | **[P16 Bank A, final order](docs/53-p16-final-order.md)** | **Kick, KIT MIX, Bass, Keys, Acoustic, E Gtr, then vocals — V26, load this** |
 | — | [`tools/coupling_check.py`](tools/coupling_check.py) | Run before shipping any snapshot: finds dead-end buses, shared faders, wet/dry drift, duplicate inputs, wrong labels |
 | — | **[Ring-out procedure](checklists/ring-out-procedure.md)** | **Printable step-by-step for ringing out the wedges and mains, with a notch log** |
 | A1 | [X32/M32 mapping](docs/appendix-x32-m32-mapping.md) | If the desk is actually an X32, not a WING |
